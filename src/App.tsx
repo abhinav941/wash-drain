@@ -4,19 +4,13 @@ import {Router} from "react-router-dom"
 
 import "antd/dist/antd.css";
 
-import { darkTheme, lightTheme } from "utils/theme";
-import { useDarkMode } from "components/useTheme";
+import {  lightTheme } from "utils/theme";
 
 export const history = createBrowserHistory();
 
 function App() {
-    const [theme /* toggleTheme */, , componentMounted] = useDarkMode();
-    const themeMode = theme === "light" ? lightTheme : darkTheme;
-    if (!componentMounted) {
-        return <div />;
-    }
     return (
-        <ThemeProvider theme={themeMode}>
+        <ThemeProvider theme={lightTheme}>
     <Router history={history}>
     </Router>
 

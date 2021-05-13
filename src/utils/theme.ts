@@ -10,7 +10,7 @@ export const screenSize = {
 };
 
 /* Colors: */
-let wash_drain_color = {
+export const wash_drain_color = {
 "light-red": "#E25757",
 "white": "#DFE7ED",
 "grey": "#A5B8CC",
