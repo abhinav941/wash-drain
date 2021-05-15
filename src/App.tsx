@@ -12,11 +12,24 @@ import { Modal } from 'components/Modal';
 export const history = createBrowserHistory();
 
 function App() {
+    const [visible, setVisible] = React.useState<boolean>(false);
+
+    const toggleVisibility = () => {
+        setVisible(prevProps => {
+            return !prevProps;
+        });
+    };
     return (
         <ThemeProvider theme={lightTheme}>
             <Router history={history}>
-                <Modal visible={true} loading={false}>
-                    Hello
+                <button onClick={toggleVisibility}> Show modal </button>
+
+                <Modal visible={visible}>
+                    <Modal.Title> Add Something </Modal.Title>
+                    <Modal.Description> to add something here</Modal.Description>
+                    <Modal.CancelButton onClick={toggleVisibility} />
+                    <Modal.Content> </Modal.Content>
+                    <Modal.Footer> </Modal.Footer>
                 </Modal>
             </Router>
         </ThemeProvider>

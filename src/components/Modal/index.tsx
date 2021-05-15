@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
-import { Modal as AntdModal } from 'antd';
 
-import { Container, Title, Description, Content, Footer } from './styled';
+import { Container, Title, Description, Content, Footer, CancelButtonContainer } from './styled';
+
+import { ReactComponent as CancelButton } from 'assets/icons/close.svg';
 
 interface ChildrenProps {
     children: ReactNode;
@@ -9,25 +10,36 @@ interface ChildrenProps {
 
 interface ModalProps {
     visible: boolean;
-    loading: boolean;
 }
 
-export const Modal = ({ children, visible, loading, ...restProps }: ModalProps & ChildrenProps) => {
-    return <Container {...restProps}>{children}</Container>;
+export const Modal = ({ children, visible, ...restProps }: ModalProps & ChildrenProps) => {
+    return (
+        <Container visible={visible} {...restProps}>
+            {children}
+        </Container>
+    );
 };
 
-Modal.Title = (props: ChildrenProps) => {
-    return <Title>{props.children}</Title>;
+Modal.Title = ({ children, ...restProps }: ChildrenProps) => {
+    return <Title {...restProps}>{children}</Title>;
 };
 
-Modal.Description = (props: ChildrenProps) => {
-    return <Description>{props.children}</Description>;
+Modal.Description = ({ children, ...restProps }: ChildrenProps) => {
+    return <Description {...restProps}>{children}</Description>;
 };
 
-Modal.Content = (props: ChildrenProps) => {
-    return <Content>{props.children}</Content>;
+Modal.Content = ({ children, ...restProps }: ChildrenProps) => {
+    return <Content {...restProps}>{children}</Content>;
 };
 
-Modal.Footer = (props: ChildrenProps) => {
-    return <Footer>{props.children}</Footer>;
+Modal.Footer = ({ children, ...restProps }: ChildrenProps) => {
+    return <Footer {...restProps}>{children}</Footer>;
+};
+
+Modal.CancelButton = ({ ...restProps }: any) => {
+    return (
+        <CancelButtonContainer {...restProps}>
+            <CancelButton />
+        </CancelButtonContainer>
+    );
 };
