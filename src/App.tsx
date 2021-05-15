@@ -12,7 +12,7 @@ export const history = createBrowserHistory();
 function App() {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Router history={history}>helllos</Router>
+            <Router history={history}></Router>
         </ThemeProvider>
     );
 }
