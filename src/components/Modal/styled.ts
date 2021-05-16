@@ -8,6 +8,7 @@ export const Container = styled.div<{ visible: boolean }>`
     left: 50%;
     display: ${props => (props.visible ? 'block' : 'none')};
     transform: translate(-50%, -50%);
+    /* This color should be given through theme */
     background-color: #fff;
     border-radius: 20px;
     padding: 40px 50px 45px 50px;
@@ -22,6 +23,7 @@ export const Title = styled.h2`
 `;
 
 export const Description = styled.p`
+    /* This color should be given through theme */
     color: #07335b;
     opacity: 0.61;
 `;
