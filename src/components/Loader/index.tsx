@@ -15,9 +15,17 @@ export const Loader = styled.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background: radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%) center left,
-        radial-gradient(var(--r1) var(--r2) at bottom, #269af2 79.5%, #0000 80%) center center,
-        radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #269af2 80%) center right, #ccc;
+    background: radial-gradient(
+                var(--r1) var(--r2) at top,
+                #0000 79.5%,
+                ${props => props.theme.loader.backgroundColor} 80%
+            )
+            center left,
+        radial-gradient(var(--r1) var(--r2) at bottom, ${props => props.theme.loader.backgroundColor} 79.5%, #0000 80%)
+            center center,
+        radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, ${props => props.theme.loader.backgroundColor} 80%)
+            center right,
+        #ccc;
     background-size: 50.5% 220%;
     background-position: -100% 0%, 0% 0%, 100% 0%;
     background-repeat: no-repeat;
