@@ -26,6 +26,11 @@ export const PrimaryButton = styled(Button)`
         color: ${props => props.theme.button.primary};
         border-color: ${props => props.theme.button.primary};
     }
+    &:focus {
+        background-color: ${props => props.theme.button.primaryFontColor};
+        color: ${props => props.theme.button.primary};
+        border-color: ${props => props.theme.button.primary};
+    }
 `;
 
 export const SecondaryButton = styled(Button)`
@@ -37,6 +42,9 @@ export const SecondaryButton = styled(Button)`
     &:hover {
         color: ${props => props.theme.button.secondaryFontColor};
     }
+    &:focus {
+        color: ${props => props.theme.button.secondaryFontColor};
+    }
 `;
 
 export const DangerButton = styled(Button)`
@@ -45,6 +53,12 @@ export const DangerButton = styled(Button)`
     box-shadow: ${props => props.theme.button.shadow};
 
     &:hover {
+        background-color: ${props => props.theme.button.dangerFontColor};
+        color: ${props => props.theme.button.danger};
+        border-color: ${props => props.theme.button.danger};
+    }
+
+    &:focus {
         background-color: ${props => props.theme.button.dangerFontColor};
         color: ${props => props.theme.button.danger};
         border-color: ${props => props.theme.button.danger};
