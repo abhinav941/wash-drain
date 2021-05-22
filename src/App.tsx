@@ -14,9 +14,7 @@ export const history = createBrowserHistory();
 function App() {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Router history={history}>
-                <SampleModalContainer />
-            </Router>
+            <Router history={history}></Router>
         </ThemeProvider>
     );
 }
