@@ -56,6 +56,7 @@ export const CancelButtonContainer = styled.div`
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 20px;
-    height: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
 `;

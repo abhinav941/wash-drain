@@ -31,7 +31,7 @@ export const shadow = {
 };
 
 export const lightTheme: Theme = {
-    backdropColor: color['blue-navy'],
+    backdropColor: 'black',
     button: {
         primary: color['blue-light'],
         secondary: 'none',
