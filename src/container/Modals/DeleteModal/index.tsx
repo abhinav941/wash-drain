@@ -5,10 +5,11 @@ import { DangerButton, SecondaryButton, Modal } from 'components';
 
 interface Props {
     visible: boolean;
+    loading: boolean;
     toggleVisibility: () => void;
 }
 
-const DeleteModalConatainer = ({ visible, toggleVisibility }: Props) => {
+const DeleteModalConatainer = ({ visible, toggleVisibility, loading }: Props) => {
     return (
         <Modal visible={visible} style={{ width: '512px' }}>
             <Modal.CancelButton onClick={toggleVisibility} />
@@ -29,10 +30,10 @@ const DeleteModalConatainer = ({ visible, toggleVisibility }: Props) => {
             </Modal.Description>
 
             <Modal.Footer style={{ marginTop: '20px' }}>
-                <SecondaryButton size="large" style={{ width: '40%', textAlign: 'left' }}>
+                <SecondaryButton disabled={loading} size="large" style={{ width: '40%', textAlign: 'left' }}>
                     No, cancel
                 </SecondaryButton>
-                <DangerButton size="large" style={{ width: '50%' }}>
+                <DangerButton size="large" style={{ width: '50%' }} loading={loading}>
                     Yes, delete
                 </DangerButton>
             </Modal.Footer>

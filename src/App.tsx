@@ -14,7 +14,9 @@ export const history = createBrowserHistory();
 function App() {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Router history={history}></Router>
+            <Router history={history}>
+                <SampleModalContainer loading={false} visible={true} toggleVisibility={() => {}} />
+            </Router>
         </ThemeProvider>
     );
 }

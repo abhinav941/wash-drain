@@ -23,7 +23,8 @@ export const Backdrop = styled.div`
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: ${props => props.theme.backdropColor};
+    opacity: 0.3;
     z-index: 2;
     cursor: pointer;
     backdrop-filter: blur(10px);

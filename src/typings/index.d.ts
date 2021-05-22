@@ -1,4 +1,5 @@
 type Theme = {
+    backdropColor: string;
     button: {
         primary: string;
         secondary: string;
