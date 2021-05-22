@@ -8,4 +8,7 @@ type Theme = {
         dangerFontColor: string;
         shadow: string;
     };
+    loader: {
+        backgroundColor: string;
+    };
 };

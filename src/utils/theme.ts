@@ -19,6 +19,7 @@ export const color = {
     'blue-light': '#28CBD5',
     'blue-picton': '#7DE6FF',
     'blue-navy': '#07335B',
+    'water-blue': '#269af2 ',
 };
 
 export const shadow = {
@@ -38,6 +39,9 @@ export const lightTheme: Theme = {
         secondaryFontColor: color['blue-navy'],
         dangerFontColor: color['pure-white'],
         shadow: 'none',
+    },
+    loader: {
+        backgroundColor: color['water-blue'],
     },
 };
 
