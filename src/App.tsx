@@ -7,13 +7,16 @@ import 'antd/dist/antd.css';
 import './App.css';
 
 import { lightTheme } from 'utils';
+import SampleModalContainer from 'container/Modals/DeleteModal';
 
 export const history = createBrowserHistory();
 
 function App() {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Router history={history}></Router>
+            <Router history={history}>
+                <SampleModalContainer />
+            </Router>
         </ThemeProvider>
     );
 }
