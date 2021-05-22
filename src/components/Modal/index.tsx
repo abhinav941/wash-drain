@@ -1,11 +1,12 @@
 import React, { ReactNode } from 'react';
 
-import { Container, Title, Description, Content, Footer, CancelButtonContainer } from './styled';
+import { Container, Title, Description, Content, Footer, CancelButtonContainer, Backdrop } from './styled';
 
 import { ReactComponent as CancelButton } from 'assets/icons/close.svg';
 
 interface ChildrenProps {
     children: ReactNode;
+    style?: Object;
 }
 
 interface ModalProps {
@@ -14,9 +15,12 @@ interface ModalProps {
 
 export const Modal = ({ children, visible, ...restProps }: ModalProps & ChildrenProps) => {
     return (
-        <Container visible={visible} {...restProps}>
-            {children}
-        </Container>
+        <>
+            {visible ? <Backdrop /> : null}
+            <Container visible={visible} {...restProps}>
+                {children}
+            </Container>
+        </>
     );
 };
 

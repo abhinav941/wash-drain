@@ -13,6 +13,20 @@ export const Container = styled.div<{ visible: boolean }>`
     border-radius: 20px;
     padding: 40px 50px 45px 50px;
     text-align: left;
+    z-index: 10;
+`;
+
+export const Backdrop = styled.div`
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
 `;
 
 export const Title = styled.h2`
