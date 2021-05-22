@@ -4,6 +4,7 @@ import { createBrowserHistory } from 'history';
 import { Router } from 'react-router-dom';
 
 import 'antd/dist/antd.css';
+import './App.css';
 
 import { lightTheme } from 'utils';
 
