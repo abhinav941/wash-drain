@@ -1,4 +1,5 @@
 export * from './Buttons';
-export { default as Layout } from './Layout';
+export { Layout } from './Layout';
+export { Sidebar } from './Sidebar';
 export { Loader } from './Loader';
 export { Modal } from './Modal';

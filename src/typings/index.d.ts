@@ -12,3 +12,8 @@ type Theme = {
         backgroundColor: string;
     };
 };
+
+interface ChildrenProps {
+    children?: ReactNode;
+    style?: Object;
+}

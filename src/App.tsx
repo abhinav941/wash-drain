@@ -7,13 +7,16 @@ import 'antd/dist/antd.css';
 import './App.css';
 
 import { lightTheme } from 'utils';
+import { SidebarContainer } from 'container/Sidebar';
 
 export const history = createBrowserHistory();
 
 function App() {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Router history={history}></Router>
+            <Router history={history}>
+                <SidebarContainer />
+            </Router>
         </ThemeProvider>
     );
 }

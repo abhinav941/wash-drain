@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Header, Sidebar, Content } from './styled';
 
-const Layout = ({ children }: any) => {
+export const Layout = ({ children }: any) => {
     return <Container>{children}</Container>;
 };
 
