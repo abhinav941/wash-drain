@@ -11,6 +11,13 @@ type Theme = {
     loader: {
         backgroundColor: string;
     };
+    sidebar: {
+        activeBackgroundColor: string;
+        activeFontColor: string;
+        fontColor: string;
+        backgroundColor: string;
+        activeBoxShadow: string;
+    };
 };
 
 interface ChildrenProps {

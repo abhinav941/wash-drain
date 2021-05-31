@@ -15,6 +15,7 @@ export const color = {
     'light-red': '#E25757',
     'white': '#DFE7ED',
     'grey': '#A5B8CC',
+    'dark-grey': '	#888888',
     'blue-dark': '#33608A',
     'blue-light': '#28CBD5',
     'blue-picton': '#7DE6FF',
@@ -42,6 +43,13 @@ export const lightTheme: Theme = {
     },
     loader: {
         backgroundColor: color['water-blue'],
+    },
+    sidebar: {
+        activeFontColor: color['blue-navy'],
+        activeBackgroundColor: color['white'],
+        fontColor: color['dark-grey'],
+        backgroundColor: color['pure-white'],
+        activeBoxShadow: shadow['very-light'],
     },
 };
 
