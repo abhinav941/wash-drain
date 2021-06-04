@@ -13,7 +13,7 @@ export const screenSize = {
 export const color = {
     'pure-white': '#ffffff',
     'light-red': '#E25757',
-    'white': '#DFE7ED',
+    'white': '#F5F7F9',
     'grey': '#A5B8CC',
     'dark-grey': '	#888888',
     'blue-dark': '#33608A',
@@ -49,7 +49,7 @@ export const lightTheme: Theme = {
         activeBackgroundColor: color['white'],
         fontColor: color['dark-grey'],
         backgroundColor: color['pure-white'],
-        activeBoxShadow: shadow['very-light'],
+        activeBoxShadow: 'none',
     },
 };
 

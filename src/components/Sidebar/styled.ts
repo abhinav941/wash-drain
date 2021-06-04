@@ -1,8 +1,6 @@
 import { styled } from 'utils';
 import { NavLink } from 'react-router-dom';
 
-import { ReactComponent as ArrowDown } from 'assets/icons/arrow-down.svg';
-
 export const Container = styled.div`
     width: 100%;
     height: 100%;
@@ -23,12 +21,12 @@ export const Menu = styled.div<{ visible?: boolean }>`
 //----------------------------------------------------------------
 // Crate Icons
 //----------------------------------------------------------------
-export const OpenIcon = styled(ArrowDown)`
+export const OpenIcon = styled.img`
     margin-left: 10px;
     font-size: 20px;
 `;
 
-export const CloseIcon = styled(ArrowDown)`
+export const CloseIcon = styled.img`
     margin-left: 10px;
     transform: rotate(-90deg);
     font-size: 20px;
@@ -39,15 +37,18 @@ export const CloseIcon = styled(ArrowDown)`
 //----------------------------------------------------------------
 export const Icon = styled.div`
     margin-right: 10px;
+    position: absolute;
 `;
 
-export const SideLink = styled(NavLink)<{ navStyle?: object }>`
+export const ActiveIcon = styled.img``;
+export const InactiveIcon = styled.img``;
+
+export const SideLink = styled(NavLink)`
     font-size: 16px;
 
-    padding: 10px;
+    padding: 10px 20px;
     margin-bottom: 10px;
 
-    display: block;
     color: ${props => props.theme.sidebar.fontColor};
     background-color: ${props => props.theme.sidebar.backgroundColor};
     border-radius: 6px;
@@ -57,27 +58,26 @@ export const SideLink = styled(NavLink)<{ navStyle?: object }>`
         color: ${props => props.theme.sidebar.activeFontColor};
     }
 
-    ${CloseIcon} {
+    ${CloseIcon},${InactiveIcon} {
         display: flex;
     }
-    ${OpenIcon} {
+    ${OpenIcon},${ActiveIcon} {
         display: none;
     }
     &.active {
         color: ${props => props.theme.sidebar.activeFontColor};
         background-color: ${props => props.theme.sidebar.activeBackgroundColor};
         opacity: 1;
-        ${props => (props.navStyle ? { ...props.navStyle } : null)}
-        box-shadow:${props => props.theme.sidebar.activeBoxShadow};
+        box-shadow: ${props => props.theme.sidebar.activeBoxShadow};
 
         ${Menu} {
             display: flex;
             padding: 0;
         }
-        ${CloseIcon} {
+        ${CloseIcon},${InactiveIcon} {
             display: none;
         }
-        ${OpenIcon} {
+        ${OpenIcon} ,${ActiveIcon} {
             display: flex;
         }
     }
@@ -86,6 +86,7 @@ export const SideLink = styled(NavLink)<{ navStyle?: object }>`
 export const Title = styled.div`
     display: flex;
     justify-content: left;
+    margin-left: 35px !important;
     align-items: center;
 `;
 
