@@ -58,3 +58,5 @@ export const CancelButtonContainer = styled.div`
     width: 20px;
     height: 20px;
 `;
+
+export const CancelButton = styled.img``;

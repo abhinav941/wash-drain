@@ -1,8 +1,17 @@
 import React, { ReactNode } from 'react';
 
-import { Container, Title, Description, Content, Footer, CancelButtonContainer, Backdrop } from './styled';
+import {
+    Container,
+    Title,
+    Description,
+    Content,
+    Footer,
+    CancelButtonContainer,
+    Backdrop,
+    CancelButton,
+} from './styled';
 
-import { ReactComponent as CancelButton } from 'assets/icons/close.svg';
+import CloseIcon from 'assets/icons/close.png';
 
 interface ChildrenProps {
     children: ReactNode;
@@ -43,7 +52,7 @@ Modal.Footer = ({ children, ...restProps }: ChildrenProps) => {
 Modal.CancelButton = ({ ...restProps }: any) => {
     return (
         <CancelButtonContainer {...restProps}>
-            <CancelButton />
+            <CancelButton src={CloseIcon} />
         </CancelButtonContainer>
     );
 };
