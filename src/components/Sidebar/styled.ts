@@ -38,6 +38,8 @@ export const CloseIcon = styled.img`
 export const Icon = styled.div`
     margin-right: 10px;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 `;
 
 export const ActiveIcon = styled.img``;
@@ -45,6 +47,7 @@ export const InactiveIcon = styled.img``;
 
 export const SideLink = styled(NavLink)`
     font-size: 16px;
+    position: relative;
 
     padding: 10px 20px;
     margin-bottom: 10px;
