@@ -11,8 +11,8 @@ import Dashboard from 'assets/icons/dashboard.png';
 import Customer from 'assets/icons/inventory.png';
 import CustomerFaded from 'assets/icons/inventory-faded.png';
 
-import Offers from 'assets/icons/offers.png';
-import OffersFaded from 'assets/icons/offers-faded.png';
+// import Offers from 'assets/icons/offers.png';
+// import OffersFaded from 'assets/icons/offers-faded.png';
 
 export const SidebarContainer = () => {
     return (
@@ -25,7 +25,7 @@ export const SidebarContainer = () => {
                 <Sidebar.Title>Contact</Sidebar.Title>
             </Sidebar.SideLink>
             <Sidebar.SideLink to="/about">
-                <Sidebar.Icon active={Offers} inactive={OffersFaded} />
+                {/* <Sidebar.Icon active={Offers} inactive={OffersFaded} /> */}
                 <Sidebar.Title withCrate>About</Sidebar.Title>
                 <Sidebar.Menu>
                     <Sidebar.SubMenuLink exact to="/about">
